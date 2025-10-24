@@ -26,7 +26,7 @@ final class DollViewModel: ObservableObject {
         switch gender {
         case .female:
             let bodies = [
-                DressDoll(imageName: "Body", layerOrder: 2, category: .body),
+                DressDoll(imageName: "Body", layerOrder: 1, category: .body),
             ]//body ends
             itemByCategory[.body] = bodies
             selected[.body] = bodies[0]
@@ -66,29 +66,23 @@ final class DollViewModel: ObservableObject {
         case .female:
     
         itemByCategory[.background] = [
-            DressDoll(imageName: "background 1", layerOrder: 0, category: .background),
             DressDoll(imageName: "background 2", layerOrder: 0, category: .background),
             DressDoll(imageName: "background 3", layerOrder: 0, category: .background),
-            DressDoll(imageName: "background 4", layerOrder: 0, category: .background),
-            DressDoll(imageName: "background 5", layerOrder: 0, category: .background),
-            DressDoll(imageName: "background 6", layerOrder: 0, category: .background),
-            DressDoll(imageName: "background 7", layerOrder: 0, category: .background),
-            DressDoll(imageName: "background 8", layerOrder: 0, category: .background),
-            DressDoll(imageName: "background 9", layerOrder: 0, category: .background)
+            DressDoll(imageName: "background 7", layerOrder: 0, category: .background)
         ]//backgroundoption end
         
     
         
         itemByCategory[.backHair] = [
-            DressDoll(imageName: "curly_hair", layerOrder: 1, category: .hair),
-            DressDoll(imageName: "short_hair", layerOrder: 1, category: .hair),
-            DressDoll(imageName: "straight_hair", layerOrder: 1, category: .hair)
+            DressDoll(imageName: "curly_hair", layerOrder: 0, category: .hair),
+            DressDoll(imageName: "short_hair", layerOrder: 0, category: .hair),
+            DressDoll(imageName: "straight_hair", layerOrder: 0, category: .hair)
         ]//backHair end here
         
         itemByCategory[.dresses] = [
             DressDoll(imageName: "checkered_dress", layerOrder: 4, category: .dresses),
             DressDoll(imageName: "jean_dress", layerOrder: 4, category: .dresses),
-            DressDoll(imageName: "off_shoulder_dress", layerOrder: 4, category: .dresses),
+            DressDoll(imageName: "off_shoulder dress", layerOrder: 4, category: .dresses),
             DressDoll(imageName: "overalls", layerOrder: 4, category: .dresses),
             DressDoll(imageName: "red_dress", layerOrder: 4, category: .dresses)
         ]//dresses options end here
@@ -103,11 +97,11 @@ final class DollViewModel: ObservableObject {
         ]//socks options ends
         
         itemByCategory[.hair] = [
-            DressDoll(imageName: "curtain_bangs", layerOrder: 3, category: .hair),
-            DressDoll(imageName: "hair_behind ears", layerOrder: 3, category: .hair),
-            DressDoll(imageName: "side_bangs", layerOrder: 3, category: .hair),
-            DressDoll(imageName: "straight_bangs", layerOrder: 3, category: .hair),
-            DressDoll(imageName: "strands", layerOrder: 3, category: .hair),
+            DressDoll(imageName: "curtain_bangs", layerOrder: 2, category: .hair),
+            DressDoll(imageName: "hair_behind ears", layerOrder: 2, category: .hair),
+            DressDoll(imageName: "side_bangs", layerOrder: 2, category: .hair),
+            DressDoll(imageName: "straight_bangs", layerOrder: 2, category: .hair),
+            DressDoll(imageName: "strands", layerOrder: 2, category: .hair),
         ]//hair options end
         
         itemByCategory[.pants] = [
@@ -144,11 +138,11 @@ final class DollViewModel: ObservableObject {
         ]
         
         itemByCategory[.sweaters] = [
-            DressDoll(imageName: "checkered_sweater", layerOrder: 5, category: .sweaters),
-            DressDoll(imageName: "green_sweater", layerOrder: 5, category: .sweaters),
-            DressDoll(imageName: "pink_sweater", layerOrder: 5, category: .sweaters),
-            DressDoll(imageName: "sports_jacket", layerOrder: 5, category: .sweaters),
-            DressDoll(imageName: "windbreaker", layerOrder: 5, category: .sweaters)
+            DressDoll(imageName: "checkered_sweater", layerOrder: 8, category: .sweaters),
+            DressDoll(imageName: "green_sweater", layerOrder: 8, category: .sweaters),
+            DressDoll(imageName: "pink_sweater", layerOrder: 8, category: .sweaters),
+            DressDoll(imageName: "sports_jacket", layerOrder: 8, category: .sweaters),
+            DressDoll(imageName: "windbreaker", layerOrder: 8, category: .sweaters)
         ]//sweater option end
             
         case .male:
@@ -362,7 +356,7 @@ final class DollViewModel: ObservableObject {
                 DressDoll(imageName: "hair-4_8", layerOrder: 5, category: .Hair),
                 DressDoll(imageName: "hair-4_9", layerOrder: 5, category: .Hair),
                 DressDoll(imageName: "hair-4_10", layerOrder: 5, category: .Hair),
-                DressDoll(imageName: "hair-5_1", layerOrder: 5, category: .Hair),
+//                DressDoll(imageName: "hair-5_1", layerOrder: 5, category: .Hair),
                 DressDoll(imageName: "hair-5_2", layerOrder: 5, category: .Hair),
                 DressDoll(imageName: "hair-5_3", layerOrder: 5, category: .Hair),
                 DressDoll(imageName: "hair-5_4", layerOrder: 5, category: .Hair),

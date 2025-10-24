@@ -18,7 +18,7 @@ class AnimeMusic {
             do{
                 self.audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound))
                 audioPlayer?.numberOfLoops = -1
-                audioPlayer?.volume = 0.05
+                audioPlayer?.volume = 1.1
                 audioPlayer?.play()
             }catch{
                 print("AudioPlayer Error\(error.localizedDescription)")
