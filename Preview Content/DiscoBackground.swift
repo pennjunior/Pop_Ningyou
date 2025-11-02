@@ -59,7 +59,7 @@ struct DiscoBackground: View {
             // 4️⃣ Soft ambient glow
             RadialGradient(
                 gradient: Gradient(colors: [
-                    Color.white.opacity(0.08),
+                    Color.white.opacity(1),
                     Color.purple.opacity(0.05),
                     Color.clear
                 ]),

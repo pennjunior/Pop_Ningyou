@@ -9,6 +9,11 @@ import SwiftUI
 
 @main
 struct Pop_NingyouApp: App {
+
+    init() {
+        print("🚀 App started")
+           installCrashHandler()
+       }
     var body: some Scene {
         WindowGroup {
             ContentView()

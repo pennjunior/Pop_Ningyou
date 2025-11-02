@@ -8,8 +8,8 @@
 import Foundation
 import AVFoundation
 
-@Observable
-class AnimeMusic {
+//@Observable
+class AnimeMusic : ObservableObject {
     static let shared = AnimeMusic()
     var audioPlayer: AVAudioPlayer?
     var isPlaying = false

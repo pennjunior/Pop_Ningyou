@@ -15,28 +15,20 @@ enum CharacterType: String, CaseIterable, Identifiable, Hashable {
     var availableCategories: [CategoryType] {
         switch self {
         case .female:
-            return [ .background, .body, .socks, .backHair, .hair, .dresses, .pants, .shirts, .sweaters, .shoes]
+            return [ .body, .hair,.backHair, .socks, .shirts, .dresses, .pants,  .sweaters, .shoes]
         case .male:
-            return [ .background, .Backpacks, .Belts, .Bodies, .Bracelets, .Coats, .Eyebrows, .Eyes, .Glasses, .Gloves, .Hair, .Hats, .InHandLeft, .InHandRight, .Irises, .Jackets, .Lips, .Necklaces, .Scarves, .Shoes, .Shorts, .ShoulderLeft, .ShoulderRight, .Socks, .Swimsuits, .Tops, .Trousers, .Underwear]
+            return [ .Bodies, .Underwear, .Lips, .Irises,.Eyebrows, .Eyes, .Hair, .Hats, .Socks, .Trousers, .Tops, .Swimsuits, .Bracelets, .Coats, .Jackets, .Glasses, .Gloves, .InHandLeft, .InHandRight, .Necklaces, .Scarves,.Backpacks, .Belts, .Shoes, .Shorts, .ShoulderLeft, .ShoulderRight,    ]
         }
     }
 }
 
-enum DressLayer: Int, CaseIterable {
-    case background, body, socks, backHair, hair, dresses, pants, shirts, sweaters, shoes, Backpacks, Belts, Bodies, Bracelets, Coats, Eyebrows, Eyes, Glasses, Gloves, Hair, Hats, InHandLeft, InHandRight, Irises, Jackets, Lips, Necklaces, Scarves, Shoes, Shorts, ShoulderLeft, ShoulderRight, Socks, Swimsuits, Tops, Trousers, Underwear
-    
-    static var renderOrder: [DressLayer] {
-        return [.background, .body, .backHair, .hair, .socks, .dresses, .sweaters]
-    }
-}
-
 enum CategoryType: String, CaseIterable, Identifiable {
-    case background, body, socks, backHair, hair, dresses, pants, shirts, sweaters, shoes, Backpacks, Belts, Bodies, Bracelets, Coats, Eyebrows, Eyes, Glasses, Gloves, Hair, Hats, InHandLeft, InHandRight, Irises, Jackets, Lips, Necklaces, Scarves, Shoes, Shorts, ShoulderLeft, ShoulderRight, Socks, Swimsuits, Tops, Trousers, Underwear
+    case body, Eyes, Lips, Irises, Hair, Underwear, socks, backHair, hair, dresses, pants, Swimsuits, shirts, sweaters, shoes, Shoes, Socks, Hats, Backpacks, Belts, Bodies, Bracelets, Coats, Eyebrows,  Glasses, Gloves,  InHandLeft, InHandRight,  Jackets, Necklaces, Scarves,  Shorts, ShoulderLeft, ShoulderRight,  Tops, Trousers
     
     var id: String {rawValue}
     var displayname: String {
         switch self {
-        case .background: return "背景"
+        
         case .body: return "キャラクター"
         case .socks: return "靴下"
         case .backHair: return "背髪"
@@ -79,43 +71,42 @@ enum CategoryType: String, CaseIterable, Identifiable {
     
     var layerOrder: Int {
         switch self {
-        case .background: return 0
         case .body: return 1
-        case .backHair: return 2
-        case .socks: return 4
+        case .backHair: return 0
+        case .socks: return 2
         case .shoes: return 8
-        case .hair: return 3
+        case .hair: return 2
         case .sweaters: return 4
         case .dresses: return 5
         case .pants: return 6
         case .shirts: return 7
-        case .Backpacks: return 26
-        case .Belts: return 20
+        case .Backpacks: return 11
+        case .Belts: return 5
         case .Bodies: return 1
-        case .Bracelets: return 24
-        case .Coats: return 21
+        case .Bracelets: return 2
+        case .Coats: return 11
         case .Eyebrows: return 4
         case .Eyes: return 5
         case .Glasses: return 6
-        case .Gloves: return 19
+        case .Gloves: return 2
         case .Hair: return 5
-        case .Hats: return 17
+        case .Hats: return 6
         case .InHandLeft: return 9
         case .InHandRight: return 10
-        case .Irises: return 12
-        case .Jackets: return 22
+        case .Irises: return 5
+        case .Jackets: return 10
         case .Lips: return 4
         case .Necklaces: return 7
-        case .Scarves: return 16
+        case .Scarves: return 10
         case .Shoes: return 8
-        case .Shorts: return 11
-        case .ShoulderLeft: return 14
-        case .ShoulderRight: return 15
-        case .Socks: return 9
-        case .Swimsuits: return 23
-        case .Tops: return 13
-        case .Trousers: return 18
-        case .Underwear: return 13
+        case .Shorts: return 8
+        case .ShoulderLeft: return 8
+        case .ShoulderRight: return 8
+        case .Socks: return 2
+        case .Swimsuits: return 3
+        case .Tops: return 6
+        case .Trousers: return 9
+        case .Underwear: return 3
             
         }
     }
